@@ -240,7 +240,26 @@ plt.plot(4,-0.25, 'o',color='r',markersize=3)
 plt.text(4.1 ,-0.4,'N')
 plt.plot(4,0, 'o',color='r',markersize=3)
 plt.text(3.8 ,0,'f')
+plt.plot(4,0,'o')
+plt.text(4,0,'F1')
+plt.plot(-4,0,'o')
+plt.text(-4,0,'F2')
+plt.plot(4,0,'o')
+plt.text(4,0,'L')
+
+#Plotting line OF1
+O=np.array([0,0])
+F1=np.array([c,0])
+OF1 = line_gen(O,F1)
+plt.plot(OF1[0,:],OF1[1,:],'g',label='Foci')
+
+#Plotting line OF2
+O=np.array([0,0])
+F2=np.array([-c,0])
+OF2 = line_gen(O,F2)
+plt.plot(OF2[0,:],OF2[1,:],'g',label='Foci')
  
+
 
 plt.xlabel('$x$')
 plt.ylabel('$y$')
