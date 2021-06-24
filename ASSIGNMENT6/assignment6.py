@@ -211,8 +211,8 @@ B2 = -B1
 A = np.array([5,0])
 B = np.array([-5,0])
 f = np.array([4,0])
-M = np.array([4,0.25])
-N = np.array([4,-0.25])
+M = np.array([4,1.8])
+N = np.array([4,-1.8])
 
 #Latus rectum
 x_MN = line_gen(M,N)
@@ -228,35 +228,32 @@ plt.plot(x[0,:],x[1,:],'b' ,label='ellipse')
 
 #Labelling points
 plt.plot(0,0, 'o',color='r',markersize=3)
-plt.text(0.2 ,-0.2,'C')
+plt.text(-0.1 ,0.1,'C')
 plt.plot(5,0, 'o',color='r',markersize=3)
-plt.text(4.8 ,-0.2,'A')
+plt.text(4.7 ,0.1,'A')
 plt.plot(-5,0, 'o',color='r',markersize=3)
-plt.text(-4.9 ,0.2,'B')
-plt.plot(4,0.25, 'o',color='r',markersize=3)
-plt.plot(4,0.25, 'o',color='r',markersize=3)
-plt.text(4.1 ,0.4,'M')
-plt.plot(4,-0.25, 'o',color='r',markersize=3)
-plt.text(4.1 ,-0.4,'N')
+plt.text(-4.9 ,0.1,'B')
+plt.plot(4,1.8, 'o',color='r',markersize=3)
+plt.text(4.1 ,1.3,'M')
+plt.plot(4,-1.8, 'o',color='r',markersize=3)
+plt.text(4.1 ,-1.4,'N')
 plt.plot(4,0, 'o',color='r',markersize=3)
-plt.text(4.1 ,0,'f')
+plt.text(4.2 ,0,'f')
 plt.plot(4,0,'o',color='r',markersize=3)
 plt.text(3.6,0.1,'$F_1$')
 plt.plot(-4,0,'o',color='r',markersize=3)
 plt.text(-4.1,0.1,'$F_2$')
-plt.plot(4,0,'o',color='r',markersize=3)
-plt.text(4,0,'L')
 
 #Plotting line OF1
 O=np.array([0,0])
 F1=np.array([c,0])
-OF1 = line_gen(O,F_1)
+OF1 = line_gen(O,F1)
 plt.plot(OF1[0,:],OF1[1,:],'g',label='Foci')
 
 #Plotting line OF2
 O=np.array([0,0])
 F2=np.array([-c,0])
-OF2 = line_gen(O,F_2)
+OF2 = line_gen(O,F2)
 plt.plot(OF2[0,:],OF2[1,:],'g',label='Foci')
  
 
